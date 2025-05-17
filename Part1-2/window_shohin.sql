@@ -39,7 +39,6 @@ WINDOW
         ORDER BY
             shohin_id ROWS BETWEEN 2 preceding
             AND CURRENT ROW
-<<<<<<< HEAD
     );
 
 SELECT
@@ -68,6 +67,3 @@ SELECT
     ) AS moving_max
 FROM
     shohin;
-=======
-    );
->>>>>>> 2a7d54a7bee56570be1b66d9dc8e6faaffca4dc2
