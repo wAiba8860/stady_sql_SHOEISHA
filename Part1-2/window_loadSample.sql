@@ -42,22 +42,21 @@ WINDOW
             AND 1 following
     );
 
-SELECT
-    sample_date AS cur_date,
-    load_val AS cur_load,
-    min(sample_date) OVER (
-        ORDER BY
-            sample_date ASC RANGE BETWEEN interval '1' DAY preceding
-            AND interval '1' DAY preceding
-    ) AS day1_before,
-    min(load_val) OVER (
-        ORDER BY
-            sample_date ASC RANGE BETWEEN interval '1' DAY preceding
-            AND interval '1' DAY preceding
-    ) AS load_day1_before
-FROM
-    loadsample;
-
+-- SELECT
+--     sample_date AS cur_date,
+--     load_val AS cur_load,
+--     min(sample_date) OVER (
+--         ORDER BY
+--             sample_date ASC RANGE BETWEEN interval '1' DAY preceding
+--             AND interval '1' DAY preceding
+--     ) AS day1_before,
+--     min(load_val) OVER (
+--         ORDER BY
+--             sample_date ASC RANGE BETWEEN interval '1' DAY preceding
+--             AND interval '1' DAY preceding
+--     ) AS load_day1_before
+-- FROM
+--     loadsample;
 SELECT
     sample_date AS cur_date,
     min(sample_date) OVER (
