@@ -1,3 +1,4 @@
+--組み合わせを作るだけならGROUP BY句を削除してDISTINCTでも可
 SELECT
     SP1.sup AS s1,
     SP2.sup AS s2
